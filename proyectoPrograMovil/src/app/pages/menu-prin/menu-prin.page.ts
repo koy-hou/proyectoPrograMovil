@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-prin',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPrinPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) {  }
+
+  salir() {
+    this.router.navigateByUrl("login");
+  }
 
   ngOnInit() {
   }

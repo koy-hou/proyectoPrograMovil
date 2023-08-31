@@ -5,6 +5,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-card>
+    <div class="container">
+      <ion-input [(ngModel)]="usuario" label="Usuario:"></ion-input>
+      <ion-input [(ngModel)]="contra" type="Password" label="Contraseña:"></ion-input>
+      <ion-button (click)="login()">Iniciar sesion</ion-button>
+      
+    </div>
+  </ion-card>
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">login</ion-title>
