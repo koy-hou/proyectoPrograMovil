@@ -9,29 +9,29 @@ import { AlertaService } from 'src/app/services/alerta.service';
 })
 export class LoginPage implements OnInit {
 
-  usuario:string = "";
-  contra:string = "";
-   
-  constructor(private router:Router,private alerta:AlertaService) { }
+  usuario: string = "";
+  contra: string = "";
 
-  login(){
-    if (this.usuario==""){
-      this.alerta.mostrarAlerta("buu","aaa");
+  constructor(private router: Router, private alerta: AlertaService) { }
+
+  login() {
+    if (this.usuario == "") {
+      this.alerta.mostrarAlerta("buu", "aaa");
       return;
-    
-}
-    if (this.contra==""){
-      this.alerta.mostrarAlerta("1111","2222");
+
+    }
+    if (this.contra == "") {
+      this.alerta.mostrarAlerta("1111", "2222");
       return;
     }
 
-    if (this.usuario=="admin" && this.contra =="123"){
-      this.router.navigateByUrl('menu-prin');
-    }else{
-      this.alerta.mostrarAlerta("33333","4444");
+    if (this.usuario == "admin" && this.contra == "123") {
+      this.router.navigateByUrl('menu-prin/'+ this.usuario);
+    } else {
+      this.alerta.mostrarAlerta("33333", "4444");
       return;
     }
-}
+  }
 
 
   ngOnInit() {

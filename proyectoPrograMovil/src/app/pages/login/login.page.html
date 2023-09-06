@@ -1,16 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-card>
-    <div class="container">
+    <div class="container uno">
+      <ion-label>Ingrese Usuario</ion-label>
       <ion-input [(ngModel)]="usuario" label="Usuario:"></ion-input>
+      <ion-label>Ingrese Contraseña</ion-label>
       <ion-input [(ngModel)]="contra" type="Password" label="Contraseña:"></ion-input>
       <ion-button (click)="login()">Iniciar sesion</ion-button>
       
+    </div>
+    <div class="container dos">
+      <ion-button (click)="login()">Resgistrarte</ion-button>
+      <ion-label>¿Desea recuperar su contraseña?</ion-label>
+      <ion-button (click)="login()">Recuperar Contraseña</ion-button>
     </div>
   </ion-card>
   <ion-header collapse="condense">

@@ -16,8 +16,32 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'menu-prin',
+    path: 'menu-prin/:estudiante',
     loadChildren: () => import('./pages/menu-prin/menu-prin.module').then( m => m.MenuPrinPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'escan',
+    loadChildren: () => import('./pages/escan/escan.module').then( m => m.EscanPageModule)
+  },
+  {
+    path: 'confirm-asis',
+    loadChildren: () => import('./pages/confirm-asis/confirm-asis.module').then( m => m.ConfirmAsisPageModule)
+  },
+  {
+    path: 'asis',
+    loadChildren: () => import('./pages/asis/asis.module').then( m => m.AsisPageModule)
+  },
+  {
+    path: 'asis-datos',
+    loadChildren: () => import('./pages/asis-datos/asis-datos.module').then( m => m.AsisDatosPageModule)
+  },
+  {
+    path: 'recuperar-contra',
+    loadChildren: () => import('./pages/recuperar-contra/recuperar-contra.module').then( m => m.RecuperarContraPageModule)
   },
 ];
 

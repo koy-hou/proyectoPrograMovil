@@ -1,15 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>menuPrin</ion-title>
-    <ion-button (click)="salir()"></ion-button>
+    <ion-button (click)="salir()" slot="end">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">menuPrin</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card class="prin">
+    <div class="container botones">
+
+      <ion-title> 
+        ¡Hola, {{this.nombre}}!
+      </ion-title>
+
+      <ion-button>
+        hola
+      </ion-button>
+
+      <ion-button>
+        hola
+      </ion-button>
+    </div>
+  </ion-card>
+  
 </ion-content>

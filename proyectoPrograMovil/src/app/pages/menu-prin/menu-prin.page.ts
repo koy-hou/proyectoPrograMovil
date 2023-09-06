@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AlertaService } from 'src/app/services/alerta.service';
 
 @Component({
   selector: 'app-menu-prin',
@@ -8,13 +9,18 @@ import { Router } from '@angular/router';
 })
 export class MenuPrinPage implements OnInit {
 
-  constructor(private router:Router) {  }
+  nombre:string = ""
+  constructor(private router:Router, private alerta:AlertaService, private activatedRoute:ActivatedRoute) {  }
 
-  salir() {
-    this.router.navigateByUrl("login");
+  async salir() {
+    var confirm = await this.alerta.confirmarAlert("¿Desea cerrar la sesión?","Confirmar","Cancelar");
+    if(confirm == true ) {
+      this.router.navigateByUrl("login");
+    }
   }
 
   ngOnInit() {
+    this.nombre = this.activatedRoute.snapshot.params['estudiante'];
   }
 
 }
