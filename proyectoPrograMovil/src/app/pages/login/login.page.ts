@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
 
     }
     if (this.contra == "") {
-      this.alerta.mostrarAlerta("1111", "2222");
+      this.alerta.mostrarAlerta("Ingrese contraseña", "2222");
       return;
     }
 
@@ -31,6 +31,12 @@ export class LoginPage implements OnInit {
       this.alerta.mostrarAlerta("33333", "4444");
       return;
     }
+  }
+  registro() {
+    this.router.navigateByUrl('registro');
+  }
+  recuperar() {
+    this.router.navigateByUrl('recuperar-contra');
   }
 
 
