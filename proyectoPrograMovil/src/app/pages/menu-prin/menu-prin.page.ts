@@ -23,11 +23,10 @@ export class MenuPrinPage implements OnInit {
     this.nombre = this.activatedRoute.snapshot.params['estudiante'];
   }
 
-  escanear() {
+  visualizar() {
     this.router.navigateByUrl('asis');
   }
-
-  visualizar() {
+  escanear() {
     this.router.navigateByUrl('escan');
   }
 

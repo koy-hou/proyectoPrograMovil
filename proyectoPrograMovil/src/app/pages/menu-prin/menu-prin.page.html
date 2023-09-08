@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>menuPrin</ion-title>
+    <ion-title>Menu</ion-title>
     <ion-button (click)="salir()" slot="end">
       <ion-icon name="log-out"></ion-icon>
     </ion-button>
@@ -10,15 +10,29 @@
 
 <ion-content [fullscreen]="true">
   <ion-card class="prin">
-    <div class="container botones">
-
+    <div class="container saludo">
       <ion-title> 
         ¡Hola, {{this.nombre}}!
       </ion-title>
-
-      <ion-button (click)="escanear()">Escanear</ion-button>
-
-      <ion-button (click)="visualizar()">Visualizar</ion-button>
+    </div>
+    <div class="container botones ">
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="escanear()">
+            <div class="xD">
+              <ion-icon size="large" name="qr-code"></ion-icon> Escanear
+            </div>
+          </ion-button>  
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="visualizar()">
+            <div class="xD">
+              <ion-icon size="large" name="eye"></ion-icon> Visualizar
+            </div>
+          </ion-button>  
+        </ion-col>
+      </ion-row>
+      
     </div>
   </ion-card>
   

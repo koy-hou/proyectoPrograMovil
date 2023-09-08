@@ -3,27 +3,25 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>registro</ion-title>
+    <ion-title>Registrate</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <div class="container">
-      <ion-label>Ingrese sus datos</ion-label>
-      <ion-input label="Nombres:" ></ion-input>
-      <ion-input label="Apellidos:"></ion-input>
-      <ion-label>Fecha de nacimiento:</ion-label>
-      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+  <div class="container">
+    <ion-label>Ingrese sus datos</ion-label>
+    <ion-input label="Nombres:" ></ion-input>
+    <ion-input label="Apellidos:"></ion-input>
+    <ion-label>Fecha de nacimiento:</ion-label>
+    <ion-datetime-button datetime="datetime"></ion-datetime-button>
 
-      <ion-modal [keepContentsMounted]="true">
-        <ng-template>
-          <ion-datetime id="datetime"></ion-datetime>
-        </ng-template>
-      </ion-modal>
-      <ion-input label="Correo electronico:"></ion-input>
-      <ion-input type="Password" label="Contraseña:"></ion-input>
-      <ion-button (click)="confirmar()">Confirmar</ion-button>
-    </div>
-  </ion-header>
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+    <ion-input label="Correo electronico:"></ion-input>
+    <ion-input type="Password" label="Contraseña:"></ion-input>
+    <ion-button (click)="confirmar()">Confirmar</ion-button>
+  </div>
 </ion-content>
