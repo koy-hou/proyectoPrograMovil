@@ -16,27 +16,21 @@ export class LoginPage implements OnInit {
 
   login() {
     if (this.usuario == "") {
-      this.alerta.mostrarAlerta("buu", "aaa");
+      this.alerta.mostrarAlerta("Ingresar Usuario", "Error");
       return;
 
     }
     if (this.contra == "") {
-      this.alerta.mostrarAlerta("Ingrese contraseña", "2222");
+      this.alerta.mostrarAlerta("Ingrese contraseña", "Error");
       return;
     }
 
-    if (this.usuario == "admin" && this.contra == "123") {
+    if (this.usuario == "pgy4121-001d" && this.contra == "pgy4121-001d") {
       this.router.navigateByUrl('menu-prin/'+ this.usuario);
     } else {
-      this.alerta.mostrarAlerta("33333", "4444");
+      this.alerta.mostrarAlerta("Datos Incorrectos", "Error");
       return;
     }
-  }
-  registro() {
-    this.router.navigateByUrl('registro');
-  }
-  recuperar() {
-    this.router.navigateByUrl('recuperar-contra');
   }
 
 

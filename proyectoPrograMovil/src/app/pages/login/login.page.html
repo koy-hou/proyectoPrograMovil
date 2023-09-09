@@ -7,18 +7,22 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <div class="container uno">
+      <ion-img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/711px-Logo_DuocUC.svg.png"
+        alt="Registrar Asis jiji">
+      </ion-img>
       <ion-label>Ingrese Usuario</ion-label>
       <ion-input [(ngModel)]="usuario" label="Usuario:"></ion-input>
       <ion-label>Ingrese Contraseña</ion-label>
       <ion-input [(ngModel)]="contra" type="Password" label="Contraseña:"></ion-input>
       <ion-button (click)="login()">Iniciar sesion</ion-button>
-      
+
     </div>
     <div class="container dos">
-      <ion-button (click)="registro()">Registrarte</ion-button>
+      <ion-button routerLink="/registro">Registrarte</ion-button>
       <ion-label>¿Desea recuperar su contraseña?</ion-label>
-      <ion-button (click)="recuperar()">Recuperar Contraseña</ion-button>
+      <ion-button routerLink="/recuperar-contra">Recuperar Contraseña</ion-button>
     </div>
   </ion-card>
-  
+
 </ion-content>

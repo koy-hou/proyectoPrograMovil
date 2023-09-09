@@ -36,7 +36,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/asis/asis.module').then( m => m.AsisPageModule)
   },
   {
-    path: 'asis-datos',
+    path: 'asis-datos/:id',
     loadChildren: () => import('./pages/asis-datos/asis-datos.module').then( m => m.AsisDatosPageModule)
   },
   {

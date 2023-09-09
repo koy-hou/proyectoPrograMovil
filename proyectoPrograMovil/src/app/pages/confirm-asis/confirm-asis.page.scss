@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    padding: 2rem;
+    flex-direction:column;
+}
+ion-label{
+    margin-bottom: 10px;
+}
+ion-button{
+    align-self: center;
+}
+.titulo{
+    font-size: 150%;
+    margin-bottom: 10px;
+}
