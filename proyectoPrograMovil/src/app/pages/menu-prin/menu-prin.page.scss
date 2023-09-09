@@ -20,3 +20,17 @@
 ion-icon{
     margin-bottom: 10px;
 }
+ion-button {
+    color: white;
+    opacity: 0.5;
+    background: #20a1cf;
+    margin: 10px;
+  
+    --background: #490219;
+  }
+  
+@media (prefers-color-scheme: dark) {
+    ion-button {
+      --background: green;
+    }
+  }
