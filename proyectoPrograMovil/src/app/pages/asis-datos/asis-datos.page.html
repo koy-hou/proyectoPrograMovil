@@ -10,10 +10,25 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <ion-label class="titulo">Datos de la Asistencia</ion-label>
-    <ion-label>Asignatura: "Arquitectura"</ion-label>
-    <ion-label>Seccion:"ASY4131-003D"</ion-label>
-    <ion-label>Profesor:"Camilo Alexis Felipe Sebastian Muñoz"</ion-label>
-    <ion-label>Fecha:"04-09-2023"</ion-label>
-    <ion-label>Hora:"16:41-18:50"</ion-label>
+    <ion-card *ngFor="let m of asisFiltro">
+      <div class="asistencias">
+        <ion-label>Asignatura: "{{m.Asignatura}}"</ion-label>
+        <br>
+        <br>
+        <ion-label>Seccion:"{{m.Seccion}}"</ion-label>
+        <br>
+        <br>
+        <ion-label>Profesor:"{{m.Profesor}}"</ion-label>
+        <br>
+        <br>
+        <ion-label>Sala:"{{m.Sala}}"</ion-label>
+        <br>
+        <br>
+        <ion-label>Fecha:"{{m.Fecha}}"</ion-label>
+        <br>
+        <br>
+        <ion-label>Hora:"{{m.Hora}}"</ion-label>
+      </div>
+    </ion-card>
   </div>
 </ion-content>

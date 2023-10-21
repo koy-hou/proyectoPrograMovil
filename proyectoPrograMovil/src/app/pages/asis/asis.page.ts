@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { asistencias } from 'src/app/models/asistencias';
+import { StorageService } from 'src/app/services/storage.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-asis',
@@ -9,48 +10,18 @@ import { asistencias } from 'src/app/models/asistencias';
 })
 export class AsisPage implements OnInit {
 
-  asistenciasArray:asistencias[]=[];
+  asis:any;
+  asisFiltro:any;
 
-  constructor(private router:Router,) { }
+  constructor(private router:Router, private storage:StorageService, private auth:AngularFireAuth) { }
 
   ngOnInit() {
     this.cargarAsistencias();
   }
 
-  cargarAsistencias(){
-    this.asistenciasArray.push(
-      {
-        id: 1,
-        Asignatura: "Arquitectura",
-        Seccion:"ASY4131-003D",
-        Profesor:"Camilo Alexis Felipe Sebastian Muñoz",
-        Fecha:"04-09-2023",
-        Hora:"16:41-18:50"
-      },
-      {
-        id: 2,
-        Asignatura: "Calidad de sofware",
-        Seccion:"CSY4111-002D",
-        Profesor:"Francisco Iturra",
-        Fecha:"05-09-2023",
-        Hora:"16:01-17:20"
-      },
-      {
-        id: 3,
-        Asignatura: "Arquitectura",
-        Seccion:"ASY4131-003D",
-        Profesor:"Camilo Alexis Felipe Sebastian Muñoz",
-        Fecha:"05-09-2023",
-        Hora:"string"
-      },
-      {
-        id: 4,
-        Asignatura: "Programacion de Aplicaciones Moviles",
-        Seccion:"PGY4121-001D",
-        Profesor:"Guillermo Villacura",
-        Fecha:"08-09-2023",
-        Hora:"14:31-16:40"
-      }
-    )
+  async cargarAsistencias(){
+    this.asis = await this.storage.obtenerUsuario();
+    var emailUserToken = await this.auth.currentUser;
+    this.asisFiltro = this.asis.filter((e: { asis: string; }) => e.asis == emailUserToken?.email);
   }
 }

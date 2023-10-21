@@ -10,11 +10,12 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <ion-label>Asistencias</ion-label>
-    <ion-card *ngFor="let m of asistenciasArray">
+    <ion-card *ngFor="let m of asisFiltro">
       <div class="asistencias" routerLink="/asis-datos/{{m.id}}">
         <h2>{{m.Asignatura}}</h2>
         <h2>{{m.Profesor}}</h2>
         <h2>{{m.Fecha}}</h2>
+        <h2>{{m.Hora}}</h2>
       </div>
     </ion-card>
   </div>

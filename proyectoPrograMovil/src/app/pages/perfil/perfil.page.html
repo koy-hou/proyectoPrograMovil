@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container saludo">
+    <ion-card *ngFor="let i of usuarioFiltro">
+      <h3>Nombre: {{i.nombre}} {{i.apellido}}</h3>
+      <h3>Correo: {{i.usuario}}</h3>
+      <h3>Celular: {{i.celu}}</h3>
+      <h3>Region: {{i.regionNombre}}</h3>
+      <h3>Comuna: {{i.comunaNombre}}</h3>
+    </ion-card>
+  </div>
+
+  <!-- Plugin -->
+  <ion-button (click)="copyTextToClipboard()">Copiar Texto</ion-button>
+  <ion-button (click)="readTextFromClipboard()">Leer Texto</ion-button>
+</ion-content>

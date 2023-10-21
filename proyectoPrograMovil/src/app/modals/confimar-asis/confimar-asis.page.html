@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>confimarAsis</ion-title>
+    <ion-icon (click)="close()" name="close-outline" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding-top ion-margin-top ion-margin-start">
+    <h4>{{asis.leccion}}</h4>
+    <h4>Seccion:{{asis.seccion}}</h4>
+    <h4>Asignatura:{{asis.asignatura}}</h4>
+    <h4>Docente: {{asis.docente}}</h4>
+    <h4>Sala: {{asis.sala}}</h4>
+    <h4>Fecha: {{asis.fecha}}</h4>
+    <h4>Hora: {{asis.hora}}</h4>
+  </div>
+  <ion-button (click)="confimar()">Confirmar</ion-button>
+</ion-content>

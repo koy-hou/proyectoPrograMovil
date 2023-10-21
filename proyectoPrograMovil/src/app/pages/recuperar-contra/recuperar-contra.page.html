@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <ion-label>Ingrese su correo</ion-label>
-    <ion-input label="Correo electronico"></ion-input>
+    <ion-input [(ngModel)] = "usuario" label="Correo electronico"></ion-input>
     <ion-button (click)="recuperar()">Confirmar</ion-button>
   </div>
 </ion-content>
