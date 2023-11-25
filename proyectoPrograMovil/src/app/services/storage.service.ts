@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Preferences } from '@capacitor/preferences';
 
 const keyStorageUser = "usuarioData";
+const keyStorageAsis = "asisData";
 
 @Injectable({
   providedIn: 'root'
@@ -49,7 +50,7 @@ export class StorageService {
   }
 
   async obtenerAsis(){
-    const asistencia = await this.getItem(keyStorageUser);
+    const asistencia = await this.getItem(keyStorageAsis);
 
     if(asistencia == null){
       return [];
@@ -71,6 +72,6 @@ export class StorageService {
         asistencia.push(i);
       }
     }
-    this.setItem(keyStorageUser,JSON.stringify(asistencia));
+    this.setItem(keyStorageAsis,JSON.stringify(asistencia));
   }
 }

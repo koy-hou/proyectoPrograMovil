@@ -20,8 +20,8 @@ export class AsisPage implements OnInit {
   }
 
   async cargarAsistencias(){
-    this.asis = await this.storage.obtenerUsuario();
+    this.asis = await this.storage.obtenerAsis();
     var emailUserToken = await this.auth.currentUser;
-    this.asisFiltro = this.asis.filter((e: { asis: string; }) => e.asis == emailUserToken?.email);
+    this.asisFiltro = this.asis.filter((e: { Correo: string; }) => e.Correo == emailUserToken?.email);
   }
 }

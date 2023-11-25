@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">asisDuoc</string>
+    <string name="title_activity_main">asisDuoc</string>
+    <string name="package_name">cl.asisLopez.duoc</string>
+    <string name="custom_url_scheme">cl.asisLopez.duoc</string>
+</resources>

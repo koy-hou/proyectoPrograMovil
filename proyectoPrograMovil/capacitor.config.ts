@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'proyectoPrograMovil',
+  appId: 'cl.asisLopez.duoc',
+  appName: 'asisDuoc',
   webDir: 'www',
   server: {
     androidScheme: 'https'

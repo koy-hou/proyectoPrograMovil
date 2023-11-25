@@ -5,7 +5,7 @@ describe('ConfimarAsisPage', () => {
   let component: ConfimarAsisPage;
   let fixture: ComponentFixture<ConfimarAsisPage>;
 
-  beforeEach(async(() => {
+  beforeEach((() => {
     fixture = TestBed.createComponent(ConfimarAsisPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
